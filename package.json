@@ -1,0 +1,43 @@
+{
+  "name": "auto-plugin-composer",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Viet Pham",
+    "email": "viet@webonyx.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phamviet/auto-plugin-composer"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "automation",
+    "semantic",
+    "release",
+    "github",
+    "labels",
+    "automated",
+    "continuos integration",
+    "changelog"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "start": "npm run build -- -w",
+    "lint": "eslint src --ext .ts",
+    "test": "jest --maxWorkers=2 --config ../../package.json"
+  },
+  "dependencies": {
+    "@auto-it/core": "10.37.6",
+    "io-ts": "^2.1.2",
+    "semver": "^7.0.0"
+  }
+}
