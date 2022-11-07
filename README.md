@@ -23,7 +23,7 @@ yarn add -D auto-plugin-composer
 }
 ```
 
-Use with custom release script
+Use with custom script
 
 ```json
 {
@@ -32,4 +32,25 @@ Use with custom release script
     // other plugins
   ]
 }
+```
+
+Sample custom script to keep `develop` up to date with the base branch:
+
+```bash
+#!/usr/bin/env bash
+
+# ./scripts/on-release.sh
+
+echo RUNNING FROM "$0"
+
+set -xe
+
+remote=${2}
+branch=${3}
+
+set -xe
+
+git checkout develop
+git merge "$branch" -m "Merge branch $branch [skip ci]"
+git push "$remote" develop
 ```
