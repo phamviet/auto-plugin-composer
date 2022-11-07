@@ -23,12 +23,12 @@ yarn add -D auto-plugin-composer
 }
 ```
 
-Use custom publish script
+Use with custom release script
 
 ```json
 {
   "plugins": [
-    ["composer", {"publishScript":"./scripts/publish.sh"}]
+    ["composer", {"publishScript":"./scripts/on-release.sh"}]
     // other plugins
   ]
 }
