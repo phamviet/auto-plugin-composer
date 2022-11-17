@@ -1,4 +1,4 @@
-# Composer Plugin
+# Atlas Plugin
 
 
 
@@ -7,9 +7,9 @@
 This plugin is not included with the `auto` CLI installed via NPM. To install:
 
 ```bash
-npm i --save-dev auto-plugin-composer
+npm i --save-dev auto-plugin-atlas
 # or
-yarn add -D auto-plugin-composer
+yarn add -D auto-plugin-atlas
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ yarn add -D auto-plugin-composer
 ```json
 {
   "plugins": [
-    "composer"
+    "atlas"
     // other plugins
   ]
 }
@@ -28,7 +28,7 @@ Use with custom script
 ```json
 {
   "plugins": [
-    ["composer", {"publishScript":"./scripts/on-release.sh"}]
+    ["atlas", {"publishScript":"./scripts/on-release.sh"}]
     // other plugins
   ]
 }
